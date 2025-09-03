@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primodis - Matériaux de Construction & Équipements</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d3748;
+            --accent: #f6ad55;
+            --text: #e2e8f0;
+            --dark-bg: #0f172a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--dark-bg) 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Exemple d’en-tête avec gradient -->
+    <header class="hero-gradient p-8 text-center">
+        <h1 class="text-4xl font-bold text-white">Primodis</h1>
+        <p class="text-xl mt-2">Matériaux de Construction & Équipements</p>
+    </header>
+
+    <!-- Section cartes exemple -->
+    <section class="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card-hover bg-secondary p-6 rounded-xl">
+            <i class="fa-solid fa-hard-hat fa-2xl mb-4"></i>
+            <h2 class="text-xl font-semibold mb-2">Construction</h2>
+            <p>Matériaux et équipements pour vos chantiers.</p>
+        </div>
+        <div class="card-hover bg-secondary p-6 rounded-xl">
+            <i class="fa-solid fa-truck fa-2xl mb-4"></i>
+            <h2 class="text-xl font-semibold mb-2">Livraison</h2>
+            <p>Livraison rapide et fiable de tous nos produits.</p>
+        </div>
+        <div class="card-hover bg-secondary p-6 rounded-xl">
+            <i class="fa-solid fa-tools fa-2xl mb-4"></i>
+            <h2 class="text-xl font-semibold mb-2">Équipements</h2>
+            <p>Outils et machines pour vos projets professionnels.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-6 text-center bg-primary text-white">
+        &copy; 2025 Primodis. Tous droits réservés.
+    </footer>
+</body>
+</html>
